@@ -1,25 +1,108 @@
-# Deep-Sea eDNA AI-Driven Analysis Pipeline
-**Smart India Hackathon 2024-25 | Problem Statement ID: SIH-1715**
+# 🌊 Deep-Sea eDNA Analysis using AI
+🎯 Focus: Discovering hidden biodiversity using unsupervised learning
 
-## Overview
-Deep-sea ecosystems harbor vast biodiversity that remains largely undiscovered. Traditional analysis of Environmental DNA (eDNA) relies heavily on reference databases like SILVA or NCBI. However, these databases often lack comprehensive data for deep-sea taxa, leading to significant "unassigned reads" and an underestimation of biodiversity.
+**Smart India Hackathon 2024–25 | SIH-1715**
 
-This project implements an **AI-driven pipeline** using **Unsupervised Deep Learning (Variational Autoencoders)** to classify eukaryotic taxa and assess biodiversity directly from raw sequencing reads, significantly reducing reliance on incomplete reference databases.
+⭐ Using deep learning to uncover hidden marine biodiversity from DNA data
 
-## Key Features
-* **Unsupervised Feature Learning:** Learns latent genomic signatures from raw eDNA sequences without needing taxonomic labels.
-* **Novel Taxa Discovery:** Employs **DBSCAN Clustering** in the latent space to identify potentially undiscovered species.
-* **End-to-End Pipeline:** Handles everything from raw FASTQ preprocessing to community abundance reporting.
-* **PyTorch Core:** Leverages PyTorch's dynamic computation graphs for efficient VAE training and feature extraction.
+---
 
-## Project Structure
+## 📌 Problem Statement
+
+Deep-sea ecosystems contain vast biodiversity, but:
+
+* Many species are **not present in reference databases** (SILVA, NCBI)
+* Traditional methods fail to classify large portions of DNA (**“unassigned reads”**)
+* This leads to **underestimation of biodiversity**
+
+---
+
+## 💡 Solution
+
+This project builds an **AI-driven pipeline** that analyzes environmental DNA (eDNA) using:
+
+* **Variational Autoencoders (VAE)** for feature learning
+* **Clustering (DBSCAN)** to detect unknown species
+
+👉 Reduces dependence on incomplete biological databases
+👉 Enables discovery of **novel taxa**
+
+---
+
+## 🚀 Key Features
+
+* 🧠 **Unsupervised Learning**
+  Learns patterns directly from raw DNA sequences (no labels required)
+
+* 🧬 **Latent Feature Extraction**
+  Encodes genomic data into meaningful representations using VAE
+
+* 🔍 **Novel Species Detection**
+  Identifies unknown taxa via clustering in latent space
+
+* ⚙️ **End-to-End Pipeline**
+  From raw FASTQ data → preprocessing → modeling → insights
+
+* ⚡ **Efficient Training**
+  Built using PyTorch for scalable deep learning workflows
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* PyTorch
+* NumPy / Pandas
+* Bioinformatics Data (FASTQ format)
+
+---
+
+## ⚙️ How It Works
+
+1. Preprocess raw DNA sequences (quality filtering + encoding)
+2. Convert sequences into numerical format (one-hot encoding)
+3. Train Variational Autoencoder (VAE)
+4. Extract latent representations
+5. Apply DBSCAN clustering
+6. Identify known vs unknown taxa
+
+---
+
+## 📂 Project Structure
+
 ```text
 project_root/
-├── data/               # Raw sequencing reads (FASTQ.GZ) and metadata (JSON)
-├── src/                # Core pipeline source code
-│   ├── data_processor.py  # Quality filtering & One-hot encoding
-│   ├── vae_model.py       # PyTorch VAE Architecture
-│   └── main.py            # Pipeline orchestration and training
-├── notebooks/          # Exploratory Data Analysis (EDA)
-├── README.md           # Project documentation
-└── requirements.txt    # Python dependencies
+├── data/                  # Raw eDNA sequencing data
+├── src/                   # Core pipeline
+│   ├── data_processor.py  # Preprocessing & encoding
+│   ├── vae_model.py       # VAE architecture
+│   └── main.py            # Pipeline execution
+├── notebooks/             # EDA & experimentation
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 📊 Key Learnings
+
+* Applied **deep learning to real-world biological data**
+* Built an **unsupervised ML pipeline from scratch**
+* Understood challenges of **incomplete datasets in bioinformatics**
+* Worked with **sequence data and high-dimensional feature spaces**
+
+---
+
+## 🚀 Future Improvements
+
+* Integrate larger biological datasets
+* Improve clustering accuracy
+* Deploy as a research tool or API
+
+---
+
+## 🤝 Acknowledgment
+
+Developed as part of **Smart India Hackathon 2024–25**
+
+---
